@@ -1,5 +1,0 @@
-﻿{
-  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
-  "Domain": "caffncode.com",
-  "Id": "04967799-7e7e-4b69-abb7-81f46d94f841"
-}
