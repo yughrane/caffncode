@@ -14,6 +14,13 @@ body {
     size: 55px;
     margin-bottom: 2px;
     height: 400px;
+    /*Safari Specific Alignment*/
+    display: -webkit-box;
+    display: -webkit-flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
   }
   .brewing-text {
     margin-top: 0;
