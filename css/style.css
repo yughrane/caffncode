@@ -5,4 +5,35 @@ body {
     padding: 50px;
     color: #333;
   }
+  .somethings-brewing {
+    animation: MoveUpDown 1.2s linear infinite;
+    position: relative;
+    size: 55px;
+    margin-bottom: 2px;
+  }
+  .brewing-text {
+    margin-top: 0;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bold;
+  }
+  .dots::after {
+    content: '';
+    animation: dotdotdot 1.2s steps(3, end) infinite;
+  }
   
+  @keyframes dotdotdot {
+    0%   { content: ''; }
+    33%  { content: '.'; }
+    66%  { content: '..'; }
+    100% { content: '...'; }
+  }
+  
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 100px;
+    }
+  }
