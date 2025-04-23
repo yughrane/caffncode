@@ -7,9 +7,13 @@ body {
   }
   .somethings-brewing {
     animation: MoveUpDown 1.2s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     size: 55px;
     margin-bottom: 2px;
+    height: 400px;
   }
   .brewing-text {
     margin-top: 0;
