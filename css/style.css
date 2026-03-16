@@ -816,6 +816,16 @@ footer a:hover {
   text-decoration: underline;
 }
 
+footer p a {
+  color: var(--caramel); /* Keeps it consistent with your brand color */
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
 /* ── RESPONSIVE ──────────────────────────────────────────────  */
 @media (max-width: 700px) {
   .nav-links { display: none; }
