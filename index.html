@@ -8,7 +8,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
   <!-- Site CSS after fonts -->
   <link rel="stylesheet" href="css/style.css" />
@@ -32,37 +32,52 @@
   <div class="hero">
     <div class="hero-inner">
 
-      <div class="hero-eyebrow reveal">Frontend Developer</div>
+      <!-- LEFT: text — single unified column -->
+      <div class="hero-text">
 
-      <div class="steam-lines reveal">
-        <div class="steam-line"></div>
-        <div class="steam-line"></div>
-        <div class="steam-line"></div>
+        <div class="hero-eyebrow reveal">Frontend Developer</div>
+
+        <div class="hero-cup-steam reveal reveal--scale">
+          <div class="steam-lines">
+            <div class="steam-line"></div>
+            <div class="steam-line"></div>
+            <div class="steam-line"></div>
+          </div>
+          <svg class="pixel-cup" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6"  y="12" width="20" height="14" fill="#2c1a0e"/>
+            <rect x="7"  y="13" width="18" height="12" fill="#c87941"/>
+            <rect x="8"  y="14" width="16" height="3"  fill="#e8c9a0" opacity="0.6"/>
+            <rect x="26" y="14" width="4"  height="6"  rx="1" fill="#2c1a0e"/>
+            <rect x="4"  y="26" width="24" height="3"  fill="#2c1a0e"/>
+            <rect x="3"  y="29" width="26" height="2"  fill="#1a0f07"/>
+          </svg>
+        </div>
+
+        <div class="hero-name">
+          <div class="hero-hey reveal-words">Hey, I'm</div>
+          <span class="highlight cursive-name reveal">Yug Rane</span>
+        </div>
+
+        <p class="hero-tagline reveal">
+          I build things for the web —
+          <span class="accent">crafted with care,</span><br>
+          served hot like a fresh espresso shot ☕
+        </p>
+
+        <div class="hero-btns reveal">
+          <a href="#projects" class="btn-primary">See my work</a>
+          <a href="#contact"  class="btn-secondary">Say hello</a>
+        </div>
+
       </div>
 
-      <!-- Pixel coffee cup -->
-      <svg class="pixel-cup reveal reveal--scale" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-        <rect x="6"  y="12" width="20" height="14" fill="#2c1a0e"/>
-        <rect x="7"  y="13" width="18" height="12" fill="#c87941"/>
-        <rect x="8"  y="14" width="16" height="3"  fill="#e8c9a0" opacity="0.6"/>
-        <rect x="26" y="14" width="4"  height="6"  rx="1" fill="#2c1a0e"/>
-        <rect x="4"  y="26" width="24" height="3"  fill="#2c1a0e"/>
-        <rect x="3"  y="29" width="26" height="2"  fill="#1a0f07"/>
-      </svg>
-
-      <h1 class="hero-name reveal-words">
-        Hey, I'm<br><span class="highlight">Yug Rane</span>
-      </h1>
-
-      <p class="hero-tagline reveal">
-        I build things for the web —
-        <span class="accent">crafted with care,</span><br>
-        served hot like a fresh espresso shot ☕
-      </p>
-
-      <div class="hero-btns reveal">
-        <a href="#projects" class="btn-primary">See my work</a>
-        <a href="#contact"  class="btn-secondary">Say hello</a>
+      <!-- RIGHT: photo -->
+      <div class="hero-photo-wrap reveal reveal--right">
+        <div class="hero-photo-frame">
+          <img src="photo.jpg" alt="Yug Rane" class="hero-photo" />
+          <div class="hero-photo-tag">yug rane ☕</div>
+        </div>
+        <div class="hero-photo-deco">caffncode™</div>
       </div>
 
     </div>
@@ -186,6 +201,9 @@
           <span>Instagram</span>
           <span class="link-icon">ig</span>
         </a>
+        <a href="/cdn-cgi/l/email-protection#e48c8188888ba4878582828a878b8081ca878b89" class="contact-link">
+          <span>Email</span>
+          <span class="link-icon">✉</span>
         </a>
         <a href="https://caffncode.com" target="_blank" rel="noopener" class="contact-link">
           <span>Website</span>

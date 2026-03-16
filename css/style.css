@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* ============================================================
    CaffnCode™ — Portfolio CSS
@@ -117,7 +117,7 @@ nav {
 /* ── HERO ────────────────────────────────────────────────────  */
 .hero {
   min-height: 100vh;
-  padding: 80px 2rem 4rem;
+  padding: 100px 3rem 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -141,8 +141,21 @@ nav {
 .hero-inner {
   position: relative;
   z-index: 1;
-  text-align: center;
-  max-width: 700px;
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 5rem;
+}
+
+.hero-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
 }
 
 .hero-eyebrow {
@@ -150,15 +163,13 @@ nav {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--caramel);
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
 }
 
-.hero-eyebrow::before,
-.hero-eyebrow::after {
+.hero-eyebrow::before {
   content: '';
   display: inline-block;
   width: 24px;
@@ -166,25 +177,36 @@ nav {
   background: var(--caramel);
 }
 
+.hero-eyebrow::after { display: none; }
+
+/* Cup + steam stacked above Hey I'm */
+.hero-cup-steam {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-bottom: 0.8rem;
+}
+
 /* Steam animation */
 .steam-lines {
   display: flex;
   gap: 5px;
-  justify-content: center;
-  margin-bottom: 0.4rem;
+  justify-content: flex-start;
+  margin-bottom: 2px;
 }
 
 .steam-line {
-  width: 2px;
+  width: 3px;
   background: var(--steam);
   border-radius: 2px;
-  opacity: 0.5;
+  opacity: 0.7;
   animation: steam 1.5s ease-in-out infinite;
 }
 
-.steam-line:nth-child(1) { height: 14px; animation-delay: 0s; }
-.steam-line:nth-child(2) { height: 20px; animation-delay: 0.2s; }
-.steam-line:nth-child(3) { height: 12px; animation-delay: 0.4s; }
+.steam-line:nth-child(1) { height: 16px; animation-delay: 0s; }
+.steam-line:nth-child(2) { height: 22px; animation-delay: 0.2s; }
+.steam-line:nth-child(3) { height: 14px; animation-delay: 0.4s; }
 
 @keyframes steam {
   0%, 100% { transform: scaleY(1) translateY(0);    opacity: 0.4; }
@@ -194,25 +216,34 @@ nav {
 /* Pixel cup */
 .pixel-cup {
   display: block;
-  width: 80px;
-  margin: 0 auto 1.6rem;
+  width: 72px;
+  margin: 0;
   image-rendering: pixelated;
   animation: float 2s ease-in-out infinite;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-10px); }
+  50%       { transform: translateY(-8px); }
 }
 
 .hero-name {
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
-  font-size: clamp(3.5rem, 11vw, 8rem);
+  font-size: clamp(2.8rem, 7vw, 6rem);
   line-height: 1.05;
   color: var(--espresso);
   letter-spacing: -0.03em;
   margin-bottom: 0.8rem;
+}
+
+.hero-hey {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  line-height: 1.05;
+  color: var(--espresso);
+  letter-spacing: -0.03em;
 }
 
 .hero-name .highlight {
@@ -221,19 +252,35 @@ nav {
   display: inline-block;
 }
 
-/* Pixel dashed underline */
-.hero-name .highlight::after {
+/* Cursive override for "Yug Rane" */
+.cursive-name {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+  font-size: clamp(3.5rem, 9vw, 7.5rem) !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1 !important;
+  color: var(--caramel);
+  display: inline-block;
+}
+
+/* Pixel dashed underline — only as wide as "Yug Rane" text */
+.cursive-name::after {
   content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
+  display: block;
   width: 100%;
   height: 6px;
+  margin-top: 4px;
   background: repeating-linear-gradient(
     90deg,
     var(--caramel) 0px, var(--caramel) 6px,
     transparent 6px, transparent 9px
   );
+}
+
+/* Remove old ::after from .highlight since cursive-name handles it */
+.hero-name .highlight::after {
+  display: none;
 }
 
 .hero-tagline {
@@ -252,8 +299,86 @@ nav {
 .hero-btns {
   display: flex;
   gap: 1rem;
-  justify-content: center;
   flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+/* ── HERO PHOTO ───────────────────────────────────────────────  */
+.hero-photo-wrap {
+  position: relative;
+  flex-shrink: 0;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-photo-frame {
+  width: 420px;
+  height: 520px;
+  border: 2px solid var(--espresso);
+  box-shadow: 8px 8px 0 var(--caramel);
+  overflow: hidden;
+  position: relative;
+  background: var(--latte);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: sepia(0.12) contrast(1.04);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hero-photo-frame:hover .hero-photo {
+  transform: scale(1.04);
+  filter: sepia(0) contrast(1);
+}
+
+/* Pixel stripe at top of photo */
+.hero-photo-frame::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--caramel) 0px, var(--caramel) 6px,
+    var(--espresso) 6px, var(--espresso) 9px
+  );
+  z-index: 2;
+}
+
+/* Name tag on photo */
+.hero-photo-tag {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: var(--espresso);
+  color: var(--cream);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.5rem 0.8rem;
+  z-index: 2;
+}
+
+/* Decorative rotated label beside photo */
+.hero-photo-deco {
+  position: absolute;
+  bottom: 2.5rem;
+  right: -2.2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: var(--steam);
+  letter-spacing: 0.08em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
 }
 
 /* ── BUTTONS ─────────────────────────────────────────────────  */
@@ -694,6 +819,41 @@ footer a:hover {
 @media (max-width: 700px) {
   .nav-links { display: none; }
 
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-cup-steam {
+    align-items: center;
+  }
+
+  .steam-lines {
+    justify-content: center;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-photo-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-photo-frame {
+    width: 220px;
+  }
+
+  .hero-photo-deco {
+    display: none;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -710,6 +870,10 @@ footer a:hover {
 
   .hero-name {
     font-size: 2.6rem;
+  }
+
+  .cursive-name {
+    font-size: 3.2rem !important;
   }
 }
 
