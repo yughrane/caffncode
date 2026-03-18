@@ -991,3 +991,108 @@ footer p a:hover {
     animation: none !important;
   }
 }
+
+/* ── INSTAGRAM POPOUT ─────────────────────────────────── */
+.ig-popout-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.ig-trigger {
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ig-popout {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  background: var(--cream);
+  border: 2px solid var(--espresso);
+  box-shadow: 5px 5px 0 var(--caramel);
+  min-width: 200px;
+  z-index: 300;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+.ig-popout--right {
+  left: auto;
+  right: 0;
+}
+
+.ig-popout-wrap:hover .ig-popout,
+.ig-popout-wrap:focus-within .ig-popout,
+.ig-popout.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Pixel stripe on top */
+.ig-popout::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--caramel) 0px, var(--caramel) 5px,
+    var(--espresso) 5px, var(--espresso) 8px
+  );
+}
+
+/* Arrow pointing down */
+.ig-popout::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 20px;
+  width: 14px; height: 14px;
+  background: var(--cream);
+  border-right: 2px solid var(--espresso);
+  border-bottom: 2px solid var(--espresso);
+  transform: rotate(45deg);
+}
+
+.ig-popout--right::after {
+  left: auto;
+  right: 20px;
+}
+
+.ig-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: var(--espresso);
+  border-bottom: 1px dashed var(--latte);
+  transition: background 0.12s;
+}
+
+.ig-option:last-child { border-bottom: none; }
+
+.ig-option:hover {
+  background: var(--foam);
+  color: var(--caramel);
+}
+
+.ig-option-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+.ig-option-label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: -0.01em;
+}
+
+.ig-option-sub {
+  font-size: 0.65rem;
+  color: var(--steam);
+  letter-spacing: 0.05em;
+  margin-top: 1px;
+}

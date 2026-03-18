@@ -195,15 +195,52 @@
         <h2 class="contact-title reveal-words">Let's make<br>something <span>great</span></h2>
         <p class="contact-sub reveal">Whether it's a project, a collab, or just vibing over
           coffee — my DMs are open. ☕</p>
-        <a href="https://instagram.com/caffncode" target="_blank" rel="noopener"
-           class="btn-primary reveal">@caffncode on Instagram ↗</a>
+        <div class="ig-popout-wrap">
+  <button class="btn-primary reveal ig-trigger" aria-haspopup="true" aria-expanded="false">
+    @caffncode on Instagram ↗
+  </button>
+  <div class="ig-popout" role="menu">
+    <a href="https://instagram.com/caffncode" target="_blank" rel="noopener" class="ig-option" role="menuitem">
+      <span class="ig-option-icon">📸</span>
+      <div>
+        <div class="ig-option-label">CaffnCode™</div>
+        <div class="ig-option-sub">@caffncode</div>
+      </div>
+    </a>
+    <a href="https://instagram.com/yug.rane" target="_blank" rel="noopener" class="ig-option" role="menuitem">
+      <span class="ig-option-icon">👤</span>
+      <div>
+        <div class="ig-option-label">Yug Rane</div>
+        <div class="ig-option-sub">@yug.rane</div>
+      </div>
+    </a>
+  </div>
+</div>
       </div>
 
       <div class="contact-links reveal reveal--right">
-        <a href="https://instagram.com/caffncode" target="_blank" rel="noopener" class="contact-link">
-          <span>Instagram</span>
-          <span class="link-icon">ig</span>
-        </a>
+        <div class="ig-popout-wrap">
+  <button class="contact-link ig-trigger" aria-haspopup="true" aria-expanded="false">
+    <span>Instagram</span>
+    <span class="link-icon">ig</span>
+  </button>
+  <div class="ig-popout ig-popout--right" role="menu">
+    <a href="https://instagram.com/caffncode" target="_blank" rel="noopener" class="ig-option" role="menuitem">
+      <span class="ig-option-icon">📸</span>
+      <div>
+        <div class="ig-option-label">CaffnCode™</div>
+        <div class="ig-option-sub">@caffncode</div>
+      </div>
+    </a>
+    <a href="https://instagram.com/yug.rane" target="_blank" rel="noopener" class="ig-option" role="menuitem">
+      <span class="ig-option-icon">👤</span>
+      <div>
+        <div class="ig-option-label">Yug Rane</div>
+        <div class="ig-option-sub">@yug.rane</div>
+      </div>
+    </a>
+  </div>
+</div>
         </a>
         <a href="https://caffncode.com" target="_blank" rel="noopener" class="contact-link">
           <span>Website</span>
@@ -302,6 +339,26 @@
         });
       }, 100);
     });
+
+    /* ── Instagram popout click toggle (for mobile) ── */
+document.querySelectorAll('.ig-trigger').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const popout = btn.nextElementSibling;
+    const isOpen = popout.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    // close all others
+    document.querySelectorAll('.ig-popout').forEach(p => {
+      if (p !== popout) { p.classList.remove('open'); }
+    });
+  });
+});
+
+// Close on outside click
+document.addEventListener('click', () => {
+  document.querySelectorAll('.ig-popout').forEach(p => p.classList.remove('open'));
+  document.querySelectorAll('.ig-trigger').forEach(b => b.setAttribute('aria-expanded', 'false'));
+});
   </script>
 </body>
 </html>
