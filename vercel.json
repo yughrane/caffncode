@@ -2,14 +2,17 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/projects.html"
+      "has": [{ "type": "host", "value": "projects.caffncode.com" }],
+      "destination": "/projects/index.html"
     },
     {
       "source": "/accessride",
+      "has": [{ "type": "host", "value": "projects.caffncode.com" }],
       "destination": "/projects/accessride/index.html"
     },
     {
       "source": "/accessride/",
+      "has": [{ "type": "host", "value": "projects.caffncode.com" }],
       "destination": "/projects/accessride/index.html"
     },
     { "source": "/(.*)", "destination": "/$1" }
