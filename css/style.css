@@ -85,15 +85,7 @@ nav {
   gap: 8px;
 }
 
-.nav-pixel {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: var(--caramel);
-  box-shadow: 3px 3px 0 var(--espresso);
-  image-rendering: pixelated;
-  flex-shrink: 0;
-}
+.nav-icon{display:inline-block;flex-shrink:0;vertical-align:middle;box-shadow:2px 2px 0 var(--latte);}
 
 .nav-links {
   display: flex;
