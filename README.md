@@ -1,9 +1,9 @@
-# ☕ caffncode™ — Portfolio Website
+# ☕ caffncode — Portfolio Website
 ### Yug Rane · Frontend Developer
 
 > *"Something's brewing..."*
 
-A Gen Z coffee-themed personal portfolio website for **Yug Rane**, founder of CaffnCode™ — a registered MSME under the Govt. of India.
+A Gen Z coffee-themed personal portfolio website for **Yug Rane**.
 
 ---
 
@@ -60,8 +60,7 @@ All editable content is in `index.html`. Search for these and update them:
 | Your photo | `src="photo.jpg"` | Your photo filename |
 | Email | `href="mailto:hello@caffncode.com"` | Your email |
 | Instagram | `href="https://instagram.com/caffncode"` | Your handle |
-| MSME number | `UDYAM-MH-33-0608110` | Your number |
-| Copyright year | `© 2025 CaffnCode™` | Current year |
+| Copyright year | `© 2026 CaffnCode` | Current year |
 
 ### Adding a Project
 Copy this block inside `<div class="projects-grid">` in `index.html`:
@@ -127,13 +126,6 @@ Fonts load via `@import` at the top of `style.css`. Requires internet connection
 
 ---
 
-## 🏢 Business Info
-
-CaffnCode™ is a registered MSME under the Government of India.
-**Udyam Registration No:** UDYAM-MH-33-0608110
-
----
-
 ## 📱 Social
 
 - Instagram: [@caffncode](https://instagram.com/caffncode)
@@ -143,5 +135,5 @@ CaffnCode™ is a registered MSME under the Government of India.
 
 ## 📄 License
 
-© 2025 CaffnCode™. All rights reserved.
+© 2026 CaffnCode.
 Built with ☕ and code by **Yug Rane**.
