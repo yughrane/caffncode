@@ -3,32 +3,33 @@
 
 > *"Something's brewing..."*
 
-A Gen Z coffee-themed personal portfolio website for **Yug Rane**.
+A coffee-themed personal portfolio website for **Yug Rane**.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-your-project/
-├── index.html          # Main HTML file
+caffncode/
+├── index.html          # Main portfolio page
 ├── css/
-│   └── style.css       # All styles
-├── photo.jpg           # Your hero photo (add this yourself)
-└── README.md           # This file
+│   └── style.css       # Styles & themes
+├── photo.jpg           # Hero photo
+├── projects/           # Projects directory (AccessRide, ClipDrop, etc.)
+└── README.md           # Documentation
 ```
 
-> ⚠️ `style.css` must be inside a `css/` folder. `index.html` references it as `href="css/style.css"`.
+> ⚠️ `style.css` must be inside the `css/` folder. `index.html` references it as `href="css/style.css"`.
 
 ---
 
 ## 🚀 Getting Started
 
-### 1. Add your photo
-Place your photo in the root folder and name it `photo.jpg`.
+### 1. Hero Photo
+Place your photo in the root folder and name it `photo.jpg`, or use a hosted URL in `index.html`.
 ```
-your-project/
-├── photo.jpg   ← goes here
+caffncode/
+├── photo.jpg
 ├── index.html
 └── css/
     └── style.css
@@ -57,8 +58,8 @@ All editable content is in `index.html`. Search for these and update them:
 
 | What | Where to find it | Replace with |
 |---|---|---|
-| Your photo | `src="photo.jpg"` | Your photo filename |
-| Email | `href="mailto:hello@caffncode.com"` | Your email |
+| Your photo | `src="https://assets.caffncode.com/photo.jpg"` | Your photo filename or URL |
+| Email | `mailto:yug_rane@outlook.com` | Your email |
 | Instagram | `href="https://instagram.com/yug.rane"` | Your handle |
 | Copyright year | `© 2026 CaffnCode` | Current year |
 
@@ -67,7 +68,7 @@ Copy this block inside `<div class="projects-grid">` in `index.html`:
 ```html
 <a href="YOUR_LINK" target="_blank" rel="noopener" class="project-card">
   <div class="project-stripe"></div>
-  <div class="project-num">03 / your-project.com</div>
+  <div class="project-num">04 / your-project.com</div>
   <div class="project-title">Project Name</div>
   <p class="project-desc">Short description of what you built and why.</p>
   <div class="project-tags">
@@ -126,9 +127,10 @@ Fonts load via `@import` at the top of `style.css`. Requires internet connection
 
 ---
 
-## 📱 Social
+## 📱 Social & Contact
 
 - Instagram: [@yug.rane](https://instagram.com/yug.rane)
+- Email: [yug_rane@outlook.com](mailto:yug_rane@outlook.com)
 - Website: [caffncode.com](https://caffncode.com)
 
 ---
