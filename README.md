@@ -59,7 +59,7 @@ All editable content is in `index.html`. Search for these and update them:
 |---|---|---|
 | Your photo | `src="photo.jpg"` | Your photo filename |
 | Email | `href="mailto:hello@caffncode.com"` | Your email |
-| Instagram | `href="https://instagram.com/caffncode"` | Your handle |
+| Instagram | `href="https://instagram.com/yug.rane"` | Your handle |
 | Copyright year | `© 2026 CaffnCode` | Current year |
 
 ### Adding a Project
@@ -128,7 +128,7 @@ Fonts load via `@import` at the top of `style.css`. Requires internet connection
 
 ## 📱 Social
 
-- Instagram: [@caffncode](https://instagram.com/caffncode)
+- Instagram: [@yug.rane](https://instagram.com/yug.rane)
 - Website: [caffncode.com](https://caffncode.com)
 
 ---
