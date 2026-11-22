@@ -1088,3 +1088,251 @@ footer p a:hover {
   letter-spacing: 0.05em;
   margin-top: 1px;
 }
+
+/* ── MEMBERS ONLY CARDS & CAROUSEL MODAL ── */
+.project-card.members-card {
+  border-color: var(--espresso);
+  background: var(--cream);
+  cursor: pointer;
+}
+.card-badge-members {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 3px 8px;
+  background: var(--espresso);
+  color: var(--caramel);
+  box-shadow: 2px 2px 0 var(--caramel);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+.card-preview-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--espresso);
+  color: var(--cream);
+  border: 1.5px solid var(--espresso);
+  padding: 6px 12px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 3px 3px 0 var(--caramel);
+  cursor: pointer;
+  transition: all 0.12s;
+  margin-top: 0.8rem;
+}
+.project-card:hover .card-preview-btn {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--caramel);
+  background: var(--caramel);
+  color: var(--espresso);
+}
+
+/* Modal */
+.gallery-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(26, 15, 7, 0.82);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.gallery-modal.active {
+  display: flex;
+  animation: modalFadeIn 0.2s ease both;
+}
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.gallery-card {
+  background: var(--foam);
+  border: 2px solid var(--espresso);
+  box-shadow: 8px 8px 0 var(--caramel);
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  animation: modalPop 0.22s ease both;
+}
+@keyframes modalPop {
+  from { transform: scale(0.97) translateY(8px); }
+  to { transform: scale(1) translateY(0); }
+}
+.gallery-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.4rem;
+  background: var(--espresso);
+  color: var(--cream);
+  border-bottom: 2px solid var(--caramel);
+}
+.gallery-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.gallery-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--cream);
+}
+.gallery-badge {
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  background: var(--caramel);
+  color: var(--espresso);
+  padding: 2px 7px;
+  font-weight: 700;
+}
+.gallery-close {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  color: var(--cream);
+  width: 32px;
+  height: 32px;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.gallery-close:hover {
+  border-color: var(--caramel);
+  color: var(--caramel);
+  transform: scale(1.05);
+}
+.gallery-notice {
+  background: var(--cream);
+  border-bottom: 1.5px dashed rgba(44,26,14,0.2);
+  padding: 8px 1.4rem;
+  font-size: 0.62rem;
+  color: var(--mocha);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.gallery-viewport {
+  position: relative;
+  background: #1a0f07;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  max-height: 500px;
+  overflow: hidden;
+}
+.gallery-img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+}
+.gallery-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(44,26,14,0.85);
+  border: 2px solid var(--caramel);
+  color: var(--cream);
+  width: 42px;
+  height: 42px;
+  font-size: 1.2rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.12s;
+  box-shadow: 3px 3px 0 var(--dark-roast);
+  z-index: 10;
+}
+.gallery-nav-btn:hover {
+  background: var(--caramel);
+  color: var(--espresso);
+  box-shadow: 4px 4px 0 var(--espresso);
+}
+.gallery-nav-btn.prev { left: 1rem; }
+.gallery-nav-btn.next { right: 1rem; }
+.gallery-footer {
+  padding: 0.9rem 1.4rem;
+  background: var(--foam);
+  border-top: 2px solid var(--espresso);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.gallery-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.gallery-slide-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--espresso);
+  margin-bottom: 2px;
+}
+.gallery-slide-desc {
+  font-size: 0.68rem;
+  color: var(--mocha);
+  line-height: 1.6;
+}
+.gallery-counter {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--steam);
+  white-space: nowrap;
+}
+.gallery-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 4px;
+}
+.gallery-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--latte);
+  border: 1.5px solid var(--espresso);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.gallery-dot.active {
+  background: var(--caramel);
+  box-shadow: 2px 2px 0 var(--espresso);
+  transform: scale(1.15);
+}
+@media(max-width:700px) {
+  .gallery-card { max-height: 94vh; }
+  .gallery-viewport { min-height: 220px; max-height: 320px; }
+  .gallery-img { max-height: 320px; }
+  .gallery-nav-btn { width: 34px; height: 34px; font-size: 1rem; }
+  .gallery-nav-btn.prev { left: 0.4rem; }
+  .gallery-nav-btn.next { right: 0.4rem; }
+  .gallery-title { font-size: 1rem; }
+  .gallery-badge { font-size: 0.5rem; }
+  .gallery-footer { padding: 0.7rem 1rem; }
+}

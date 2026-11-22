@@ -230,7 +230,7 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
         <div class="card-label">// order summary</div>
         <div class="stat-row">
           <span>Projects</span>
-          <strong>3+</strong>
+          <strong>5+</strong>
         </div>
         <div class="stat-row">
           <span>Specialty</span>
@@ -287,19 +287,52 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
   <div class="project-arrow">↗</div>
 </a>
 
-     <a href="https://projects.caffncode.com/clipdrop" target="_blank" rel="noopener" class="project-card">
-  <div class="project-stripe"></div>
-  <div class="project-num">03 / clipdrop</div>
-  <div class="project-title">ClipDrop</div>
-  <p class="project-desc">Your browser is the pendrive — create a room, drop files, share the code. Serverless file transfer powered by AWS S3 + Lambda. Files auto-delete on expiry.</p>
-  <div class="project-tags">
-    <span class="project-tag">AWS S3</span>
-    <span class="project-tag">Lambda</span>
-    <span class="project-tag">Serverless</span>
-    <span class="project-tag">JavaScript</span>
-  </div>
-  <div class="project-arrow">↗</div>
-</a>
+      <a href="https://projects.caffncode.com/clipdrop" target="_blank" rel="noopener" class="project-card">
+        <div class="project-stripe"></div>
+        <div class="project-num">03 / clipdrop</div>
+        <div class="project-title">ClipDrop</div>
+        <p class="project-desc">Your browser is the pendrive — create a room, drop files, share the code. Serverless file transfer powered by Cloudflare R2 + Supabase. Files auto-delete on expiry.</p>
+        <div class="project-tags">
+          <span class="project-tag">Cloudflare R2</span>
+          <span class="project-tag">Workers</span>
+          <span class="project-tag">Supabase</span>
+          <span class="project-tag">Serverless</span>
+          <span class="project-tag">JavaScript</span>
+        </div>
+        <div class="project-arrow">↗</div>
+      </a>
+
+      <!-- 04 / admin.caffncode.com -->
+      <div class="project-card members-card" onclick="openGallery('admin')" role="button" tabindex="0">
+        <div class="project-stripe"></div>
+        <div class="card-badge-members">🔒 Members Only</div>
+        <div class="project-num">04 / admin.caffncode.com</div>
+        <div class="project-title">CaffnCode Admin Portal</div>
+        <p class="project-desc">Centralized workspace admin portal. Role-based access control, automated Lark mailbox allocation, team task board, global site notices, and welcome tours.</p>
+        <div class="project-tags">
+          <span class="project-tag">Supabase SSO</span>
+          <span class="project-tag">Lark API</span>
+          <span class="project-tag">Resend</span>
+          <span class="project-tag">Internal Portal</span>
+        </div>
+        <div class="card-preview-btn">📸 View Interface</div>
+      </div>
+
+      <!-- 05 / email.caffncode.com -->
+      <div class="project-card members-card" onclick="openGallery('email')" role="button" tabindex="0">
+        <div class="project-stripe"></div>
+        <div class="card-badge-members">🔒 Members Only</div>
+        <div class="project-num">05 / email.caffncode.com</div>
+        <div class="project-title">CaffnCode Webmail</div>
+        <p class="project-desc">Retro terminal webmail client with seamless single sign-on handoff, 3-pane message inbox, thread reading, Lark Suite mail sync, and rich composing.</p>
+        <div class="project-tags">
+          <span class="project-tag">Lark Mail API</span>
+          <span class="project-tag">Supabase SSO</span>
+          <span class="project-tag">Vanilla JS</span>
+          <span class="project-tag">Workspace Mail</span>
+        </div>
+        <div class="card-preview-btn">📸 View Interface</div>
+      </div>
 
     </div>
   </section>
@@ -500,5 +533,160 @@ document.addEventListener('click', () => {
   }
 })();
   </script>
+
+<!-- ── SCREENSHOT GALLERY MODAL ── -->
+<div id="gallery-modal" class="gallery-modal" onclick="if(event.target===this)closeGallery()">
+  <div class="gallery-card">
+    <div class="gallery-header">
+      <div class="gallery-title-wrap">
+        <span style="display:inline-block;width:10px;height:10px;background:var(--caramel);box-shadow:2px 2px 0 var(--dark-roast)"></span>
+        <div id="gallery-title" class="gallery-title">Gallery</div>
+        <span id="gallery-badge" class="gallery-badge">Members Only</span>
+      </div>
+      <button class="gallery-close" onclick="closeGallery()" aria-label="Close">✕</button>
+    </div>
+
+    <div class="gallery-notice">
+      <span>🔒</span>
+      <span id="gallery-notice-text">Internal member-only service. Direct links are restricted to authenticated accounts.</span>
+    </div>
+
+    <div class="gallery-viewport">
+      <img id="gallery-img" class="gallery-img" src="" alt="Screenshot" />
+      <button class="gallery-nav-btn prev" onclick="prevSlide()" aria-label="Previous">‹</button>
+      <button class="gallery-nav-btn next" onclick="nextSlide()" aria-label="Next">›</button>
+    </div>
+
+    <div class="gallery-footer">
+      <div class="gallery-info">
+        <div>
+          <div id="gallery-slide-name" class="gallery-slide-name">Slide Title</div>
+          <div id="gallery-slide-desc" class="gallery-slide-desc">Slide description</div>
+        </div>
+        <div id="gallery-counter" class="gallery-counter">1 / 1</div>
+      </div>
+      <div id="gallery-dots" class="gallery-dots"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const GALLERIES = {
+  admin: {
+    title: 'CaffnCode Admin Portal',
+    badge: 'Internal Portal · Members Only',
+    notice: '🔒 Internal workspace management system. Direct access is restricted to verified CaffnCode team accounts.',
+    slides: [
+      {
+        src: 'img/screenshots/admin-dashboard.png',
+        title: 'Workspace Dashboard & Overview',
+        desc: 'Centralized workspace metrics, active site notice broadcasting, pending team tasks, and quick admin action triggers.'
+      },
+      {
+        src: 'img/screenshots/admin-users.png',
+        title: 'User Management & Lark Mailbox Provisioning',
+        desc: 'Directory of team members with automated Lark Suite mailbox allocation, role permissions (Super Admin / Member), department assignments, and welcome tour dispatch.'
+      },
+      {
+        src: 'img/screenshots/admin-tasks.png',
+        title: 'Team Tasks & Kanban Board',
+        desc: 'Workspace task tracking across To Do, In Progress, and Completed states with category tags, assignment info, and status updates.'
+      },
+      {
+        src: 'img/screenshots/admin-login.png',
+        title: 'Single Sign-On Login Interface',
+        desc: 'Left-aligned retro login interface with pixel branding, Supabase authentication, and secure credential handling.'
+      }
+    ]
+  },
+  email: {
+    title: 'CaffnCode Webmail',
+    badge: 'Workspace Mail · Members Only',
+    notice: '🔒 Internal webmail for CaffnCode members with @caffncode.com mailboxes. Access requires authorized SSO login.',
+    slides: [
+      {
+        src: 'img/screenshots/email-inbox.png',
+        title: '3-Pane Retro Webmail Interface',
+        desc: 'Streamlined webmail experience with folder sidebar (Inbox, Sent, Drafts, Trash), message thread list, and full reading pane powered by Lark Suite email APIs.'
+      },
+      {
+        src: 'img/screenshots/email-login.png',
+        title: 'Unified Single Sign-On Access',
+        desc: 'Dedicated login screen sharing authentication state and credentials with the admin portal for immediate inbox access.'
+      }
+    ]
+  }
+};
+
+let currentGallery = null;
+let currentSlideIndex = 0;
+
+function openGallery(key) {
+  const g = GALLERIES[key];
+  if (!g) return;
+  currentGallery = g;
+  currentSlideIndex = 0;
+
+  document.getElementById('gallery-title').textContent = g.title;
+  document.getElementById('gallery-badge').textContent = g.badge;
+  document.getElementById('gallery-notice-text').textContent = g.notice;
+
+  renderSlide();
+  const modal = document.getElementById('gallery-modal');
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeGallery() {
+  const modal = document.getElementById('gallery-modal');
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function nextSlide() {
+  if (!currentGallery) return;
+  currentSlideIndex = (currentSlideIndex + 1) % currentGallery.slides.length;
+  renderSlide();
+}
+
+function prevSlide() {
+  if (!currentGallery) return;
+  currentSlideIndex = (currentSlideIndex - 1 + currentGallery.slides.length) % currentGallery.slides.length;
+  renderSlide();
+}
+
+function goToSlide(idx) {
+  if (!currentGallery) return;
+  currentSlideIndex = idx;
+  renderSlide();
+}
+
+function renderSlide() {
+  if (!currentGallery) return;
+  const slide = currentGallery.slides[currentSlideIndex];
+  const total = currentGallery.slides.length;
+
+  const imgEl = document.getElementById('gallery-img');
+  imgEl.src = slide.src;
+  imgEl.alt = slide.title;
+
+  document.getElementById('gallery-slide-name').textContent = slide.title;
+  document.getElementById('gallery-slide-desc').textContent = slide.desc;
+  document.getElementById('gallery-counter').textContent = `${currentSlideIndex + 1} / ${total}`;
+
+  const dotsEl = document.getElementById('gallery-dots');
+  dotsEl.innerHTML = currentGallery.slides.map((_, i) =>
+    `<div class="gallery-dot ${i === currentSlideIndex ? 'active' : ''}" onclick="goToSlide(${i})" title="Slide ${i+1}"></div>`
+  ).join('');
+}
+
+document.addEventListener('keydown', (e) => {
+  const modal = document.getElementById('gallery-modal');
+  if (!modal || !modal.classList.contains('active')) return;
+  if (e.key === 'Escape') closeGallery();
+  if (e.key === 'ArrowRight') nextSlide();
+  if (e.key === 'ArrowLeft') prevSlide();
+});
+</script>
 </body>
 </html>
