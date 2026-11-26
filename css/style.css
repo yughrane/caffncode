@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@600;700;800;900&display=swap');
 
 /* ============================================================
-   CaffnCode — Portfolio CSS
+   CaffnCode - Portfolio CSS
    Yug Rane · caffncode.com
    ============================================================ */
 
@@ -30,7 +30,7 @@ html {
 
 body {
   background-color: var(--cream);
-  font-family: 'Space Mono', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: var(--espresso);
   overflow-x: hidden;
 }
@@ -75,11 +75,11 @@ nav {
 }
 
 .nav-logo {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800;
+  font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
   font-size: 1.35rem;
   color: var(--espresso);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -151,8 +151,9 @@ nav {
 }
 
 .hero-eyebrow {
-  font-size: 0.78rem;
-  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--caramel);
   margin-bottom: 0.8rem;
@@ -220,22 +221,22 @@ nav {
 }
 
 .hero-name {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800;
+  font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
   font-size: clamp(2.8rem, 7vw, 6rem);
-  line-height: 1.05;
+  line-height: 1.02;
   color: var(--espresso);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   margin-bottom: 0.8rem;
 }
 
 .hero-hey {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800;
+  font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
   font-size: clamp(2.8rem, 7vw, 6rem);
-  line-height: 1.05;
+  line-height: 1.02;
   color: var(--espresso);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
 .hero-name .highlight {
@@ -244,11 +245,11 @@ nav {
   display: inline-block;
 }
 
-/* Cursive override for "Yug Rane" */
+/* Editorial italic override for "Yug Rane" */
 .cursive-name {
-  font-family: 'Cormorant Garamond', serif !important;
+  font-family: 'Instrument Serif', serif !important;
   font-style: italic !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
   font-size: clamp(3.5rem, 9vw, 7.5rem) !important;
   letter-spacing: -0.02em !important;
   line-height: 1 !important;
@@ -256,7 +257,7 @@ nav {
   display: inline-block;
 }
 
-/* Pixel dashed underline — only as wide as "Yug Rane" text */
+/* Pixel dashed underline - only as wide as "Yug Rane" text */
 .cursive-name::after {
   content: '';
   display: block;
@@ -351,7 +352,7 @@ nav {
   bottom: 0; left: 0; right: 0;
   background: var(--espresso);
   color: var(--cream);
-  font-family: 'Space Mono', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -364,7 +365,7 @@ nav {
   position: absolute;
   bottom: 2.5rem;
   right: -2.2rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Instrument Serif', serif;
   font-style: italic;
   font-size: 0.75rem;
   color: var(--steam);
@@ -376,10 +377,11 @@ nav {
 
 /* ── BUTTONS ─────────────────────────────────────────────────  */
 .btn-primary {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.8rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   padding: 0.75rem 1.6rem;
   background: var(--espresso);
   color: var(--cream);
@@ -402,10 +404,11 @@ nav {
 }
 
 .btn-secondary {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.8rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   padding: 0.75rem 1.6rem;
   background: transparent;
   color: var(--espresso);
@@ -447,7 +450,8 @@ section {
 }
 
 .section-tag {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--caramel);
@@ -468,11 +472,11 @@ section {
 }
 
 .section-title {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800;
+  font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
   font-size: clamp(2.4rem, 5vw, 3.5rem);
   color: var(--espresso);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   margin-bottom: 3rem;
   line-height: 1.05;
 }
@@ -546,7 +550,7 @@ section {
 }
 
 .stat-num {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
   font-size: 1.1rem;
   color: var(--caramel);
@@ -628,7 +632,7 @@ section {
 }
 
 .project-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
   font-size: 1.2rem;
   color: var(--espresso);
@@ -734,11 +738,11 @@ section {
 }
 
 .contact-title {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800;
+  font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 900;
   font-size: clamp(2.4rem, 5vw, 3.5rem);
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   margin-bottom: 1rem;
   color: var(--cream);
 }
@@ -959,7 +963,7 @@ footer p a:hover {
   transform: none;
 }
 
-/* Badge shelf — each badge pops in */
+/* Badge shelf - each badge pops in */
 .badge-shelf .menu-badge {
   opacity: 0;
   transform: translateY(10px) scale(0.9);
@@ -1076,7 +1080,7 @@ footer p a:hover {
 .ig-option-icon { font-size: 1.1rem; flex-shrink: 0; }
 
 .ig-option-label {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
   font-size: 0.82rem;
   letter-spacing: -0.01em;
@@ -1117,7 +1121,7 @@ footer p a:hover {
   color: var(--cream);
   border: 1.5px solid var(--espresso);
   padding: 6px 12px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1186,7 +1190,7 @@ footer p a:hover {
   gap: 10px;
 }
 .gallery-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
   font-size: 1.15rem;
   color: var(--cream);
@@ -1206,7 +1210,7 @@ footer p a:hover {
   color: var(--cream);
   width: 32px;
   height: 32px;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1rem;
   cursor: pointer;
   display: flex;
@@ -1256,7 +1260,7 @@ footer p a:hover {
   width: 42px;
   height: 42px;
   font-size: 1.2rem;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   cursor: pointer;
   display: flex;
@@ -1288,7 +1292,7 @@ footer p a:hover {
   gap: 1rem;
 }
 .gallery-slide-name {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
   font-size: 1rem;
   color: var(--espresso);

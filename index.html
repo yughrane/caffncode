@@ -11,7 +11,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600;1,700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Site CSS after fonts -->
   <link rel="stylesheet" href="css/style.css" />
@@ -21,16 +21,16 @@
 <!-- Contact Form Modal -->
 <div id="contact-form-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:9999;justify-content:center;align-items:center">
   <div style="background:#fdf6f0;border:2px solid #2c1a0e;padding:2rem;max-width:400px;width:90%;box-shadow:6px 6px 0 #c87941;border-radius:4px">
-    <h3 style="margin:0 0 1rem;font-size:1.3rem;color:#2c1a0e">📬 Get in touch</h3>
+    <h3 style="margin:0 0 1rem;font-family:'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:900;letter-spacing:-0.03em;font-size:1.3rem;color:#2c1a0e">📬 Get in touch</h3>
     <form id="contact-form-element" onsubmit="handleContactSubmit(event)" style="display:flex;flex-direction:column;gap:1rem">
-      <input type="email" name="email" placeholder="Your email" required style="padding:0.75rem;border:2px solid #c87941;font-family:monospace;font-size:0.9rem">
-      <input type="text" name="name" placeholder="Your name" required style="padding:0.75rem;border:2px solid #c87941;font-family:monospace;font-size:0.9rem">
-      <textarea name="message" placeholder="Your message..." rows="5" required style="padding:0.75rem;border:2px solid #c87941;font-family:monospace;font-size:0.9rem;resize:vertical"></textarea>
+      <input type="email" name="email" placeholder="Your email" required style="padding:0.75rem;border:2px solid #c87941;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:0.9rem">
+      <input type="text" name="name" placeholder="Your name" required style="padding:0.75rem;border:2px solid #c87941;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:0.9rem">
+      <textarea name="message" placeholder="Your message..." rows="5" required style="padding:0.75rem;border:2px solid #c87941;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:0.9rem;resize:vertical"></textarea>
       <input type="hidden" name="_subject" value="New contact message from caffncode.com">
       <input type="hidden" name="_captcha" value="false">
       <div style="display:flex;gap:1rem">
-        <button type="submit" style="flex:1;padding:0.75rem;background:#2c1a0e;color:#fdf6f0;border:none;cursor:pointer;font-weight:bold;font-family:monospace">Send</button>
-        <button type="button" onclick="closeContactForm()" style="flex:1;padding:0.75rem;background:transparent;border:2px solid #2c1a0e;color:#2c1a0e;cursor:pointer;font-weight:bold;font-family:monospace">Cancel</button>
+        <button type="submit" style="flex:1;padding:0.75rem;background:#2c1a0e;color:#fdf6f0;border:none;cursor:pointer;font-weight:700;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:0.08em;font-size:0.78rem">Send</button>
+        <button type="button" onclick="closeContactForm()" style="flex:1;padding:0.75rem;background:transparent;border:2px solid #2c1a0e;color:#2c1a0e;cursor:pointer;font-weight:700;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:0.08em;font-size:0.78rem">Cancel</button>
       </div>
     </form>
   </div>
@@ -39,14 +39,14 @@
 <!-- Bug Report Modal -->
 <div id="bug-report-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:9999;justify-content:center;align-items:center">
   <div style="background:#fdf6f0;border:2px solid #2c1a0e;padding:2rem;max-width:400px;width:90%;box-shadow:6px 6px 0 #c87941;border-radius:4px">
-    <h3 style="margin:0 0 1rem;font-size:1.3rem;color:#2c1a0e">🐛 Report a bug</h3>
+    <h3 style="margin:0 0 1rem;font-family:'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:900;letter-spacing:-0.03em;font-size:1.3rem;color:#2c1a0e">🐛 Report a bug</h3>
     <form id="bug-report-element" onsubmit="handleBugSubmit(event)" style="display:flex;flex-direction:column;gap:1rem">
-      <input type="email" name="email" placeholder="Your email" required style="padding:0.75rem;border:2px solid #c87941;font-family:monospace;font-size:0.9rem">
-      <input type="text" name="title" placeholder="Bug title" required style="padding:0.75rem;border:2px solid #c87941;font-family:monospace;font-size:0.9rem">
-      <textarea name="description" placeholder="Describe the bug..." rows="5" required style="padding:0.75rem;border:2px solid #c87941;font-family:monospace;font-size:0.9rem;resize:vertical"></textarea>
+      <input type="email" name="email" placeholder="Your email" required style="padding:0.75rem;border:2px solid #c87941;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:0.9rem">
+      <input type="text" name="title" placeholder="Bug title" required style="padding:0.75rem;border:2px solid #c87941;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:0.9rem">
+      <textarea name="description" placeholder="Describe the bug..." rows="5" required style="padding:0.75rem;border:2px solid #c87941;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:0.9rem;resize:vertical"></textarea>
       <div style="display:flex;gap:1rem">
-        <button type="submit" style="flex:1;padding:0.75rem;background:#2c1a0e;color:#fdf6f0;border:none;cursor:pointer;font-weight:bold;font-family:monospace">Report</button>
-        <button type="button" onclick="closeBugReport()" style="flex:1;padding:0.75rem;background:transparent;border:2px solid #2c1a0e;color:#2c1a0e;cursor:pointer;font-weight:bold;font-family:monospace">Cancel</button>
+        <button type="submit" style="flex:1;padding:0.75rem;background:#2c1a0e;color:#fdf6f0;border:none;cursor:pointer;font-weight:700;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:0.08em;font-size:0.78rem">Report</button>
+        <button type="button" onclick="closeBugReport()" style="flex:1;padding:0.75rem;background:transparent;border:2px solid #2c1a0e;color:#2c1a0e;cursor:pointer;font-weight:700;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:0.08em;font-size:0.78rem">Cancel</button>
       </div>
     </form>
   </div>
@@ -159,7 +159,7 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
   <div class="hero">
     <div class="hero-inner">
 
-      <!-- LEFT: text — single unified column -->
+      <!-- LEFT: text - single unified column -->
       <div class="hero-text">
 
         <div class="hero-eyebrow reveal">Frontend Developer</div>
@@ -186,7 +186,7 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
         </div>
 
         <p class="hero-tagline reveal">
-          I build things for the web —
+          I build things for the web,
           <span class="accent">crafted with care,</span><br>
           served hot like a fresh espresso shot ☕
         </p>
@@ -223,7 +223,7 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
           <strong>CaffnCode</strong>.
           I love turning ideas into clean, functional web experiences.</p>
         <p>Like a good cup of coffee, I believe the best code is
-          <strong>brewed slowly, with intention</strong> — and always served with great UX.</p>
+          <strong>brewed slowly, with intention</strong>, and always served with great UX.</p>
         <p>When I'm not pushing pixels, you'll find me exploring new tech, tinkering
           with side projects, or making the internet a slightly more beautiful place.</p>
 
@@ -266,7 +266,7 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
   <section id="projects">
     <div class="section-tag reveal-line">Projects</div>
     <h2 class="section-title reveal-words">What I've<br>been brewing</h2>
-<a href="https://projects.caffncode.com" target="_blank" rel="noopener" style="display:inline-block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--caramel);text-decoration:none;margin-bottom:2rem;font-family:'Space Mono',monospace;">View all projects ↗</a>
+<a href="https://projects.caffncode.com" target="_blank" rel="noopener" style="display:inline-block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--caramel);text-decoration:none;margin-bottom:2rem;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;">View all projects ↗</a>
 
     <div class="projects-grid reveal-stagger">
 
@@ -274,7 +274,7 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
         <div class="project-stripe"></div>
         <div class="project-num">01 / caffncode.com</div>
         <div class="project-title">CaffnCode Website</div>
-        <p class="project-desc">My personal portfolio website — built with vanilla
+        <p class="project-desc">My personal portfolio website, built with vanilla
           HTML, CSS, and JS. Pixel-themed, cozy, and always brewing.</p>
         <div class="project-tags">
           <span class="project-tag">HTML</span>
@@ -288,7 +288,7 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
   <div class="project-stripe"></div>
   <div class="project-num">02 / accessride</div>
   <div class="project-title">AccessRide Mumbai</div>
-  <p class="project-desc">Accessibility-first rail navigation for Mumbai's 150+ stations across 9 lines — fully client-side, with voice input, GPS, dark mode, and screen reader support.</p>
+  <p class="project-desc">Accessibility-first rail navigation for Mumbai's 150+ stations across 9 lines. Fully client-side, with voice input, GPS, dark mode, and screen reader support.</p>
   <div class="project-tags">
     <span class="project-tag">HTML</span>
     <span class="project-tag">CSS</span>
@@ -303,7 +303,7 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
         <div class="project-stripe"></div>
         <div class="project-num">03 / clipdrop</div>
         <div class="project-title">ClipDrop</div>
-        <p class="project-desc">Your browser is the pendrive — create a room, drop files, share the code. Serverless file transfer powered by Cloudflare R2 + Supabase. Files auto-delete on expiry.</p>
+        <p class="project-desc">Your browser is the pendrive. Create a room, drop files, share the code. Serverless file transfer powered by Cloudflare R2 + Supabase. Files auto-delete on expiry.</p>
         <div class="project-tags">
           <span class="project-tag">Cloudflare R2</span>
           <span class="project-tag">Workers</span>
@@ -359,7 +359,7 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
         <div class="section-tag contact-tag reveal-line">Contact</div>
         <h2 class="contact-title reveal-words">Let's make<br>something <span>great</span></h2>
         <p class="contact-sub reveal">Whether it's a project, a collab, or just vibing over
-          coffee — my DMs are open. ☕</p>
+          coffee, my DMs are open. ☕</p>
         <a href="https://instagram.com/yug.rane" target="_blank" rel="noopener" class="btn-primary reveal">
           @yug.rane on Instagram ↗
         </a>
@@ -428,7 +428,7 @@ document.getElementById('bug-report-modal').addEventListener('click',(e)=>{if(e.
       revealObserver.observe(el);
     });
 
-    // Stagger grids — observe the grid, trigger children
+    // Stagger grids - observe the grid, trigger children
     const staggerObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -514,7 +514,7 @@ document.addEventListener('click', () => {
       background:${c.bg};border:2px solid ${c.border};
       box-shadow:4px 4px 0 ${c.border};
       padding:14px 16px;display:flex;align-items:flex-start;gap:12px;
-      font-family:'Space Mono',monospace;font-size:0.72rem;
+      font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:0.72rem;
       color:${c.color};line-height:1.6;
       animation:noticeSlideUp 0.3s ease both;
     `;

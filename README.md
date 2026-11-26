@@ -1,4 +1,4 @@
-# ☕ caffncode — Portfolio Website
+# ☕ caffncode - Portfolio Website
 ### Yug Rane · Frontend Developer
 
 > *"Something's brewing..."*
@@ -100,30 +100,28 @@ All colours are CSS variables at the top of `style.css`:
 
 | Font | Used for | Source |
 |---|---|---|
-| **Outfit** (800) | All headings — "Hey, I'm", section titles, nav logo | Google Fonts |
-| **Cormorant Garamond** (italic 700) | "Yug Rane" cursive name only | Google Fonts |
-| **Space Mono** (400/700) | Body text, tagline, badges, buttons | Google Fonts |
+| **Inter Tight** (900 Black) | All headings - "Hey, I'm", section titles, nav logo | Google Fonts |
+| **Instrument Serif** (italic 400) | "Yug Rane" name accent | Google Fonts |
+| **Helvetica Neue** (system) | Body text, tagline, uppercase labels, badges, buttons | System |
 
-Fonts load via `@import` at the top of `style.css`. Requires internet connection.
-
-> 💡 If you own a license for **PP Neue Montreal** (the original inspiration), replace `'Outfit'` with `'PP Neue Montreal'` everywhere in `style.css` and add a `@font-face` rule pointing to your `.woff2` files.
+Fonts load via `@import` at the top of `style.css` and `<link>` in `index.html`.
 
 ---
 
 ## ✨ Features
 
-- **Split hero layout** — text left, photo right with pixel-art coffee cup
-- **Cursive "Yug Rane"** in Cormorant Garamond italic
-- **Scroll animations** — every section reveals as you scroll using `IntersectionObserver`
+- **Split hero layout** - text left, photo right with pixel-art coffee cup
+- **Editorial italic "Yug Rane"** in Instrument Serif italic
+- **Scroll animations** - every section reveals as you scroll using `IntersectionObserver`
   - Word-by-word text reveal on headings
   - Staggered project cards
   - Skill badges pop in one by one
   - Caramel underline draws across section tags
-- **Pixel aesthetic** — grid backgrounds, dashed borders, chunky box-shadows
-- **Coffee theme** — animated floating cup, steam lines, cozy warm palette
-- **Fully responsive** — single column on mobile, centered layout
-- **No JavaScript frameworks** — pure vanilla HTML, CSS, JS
-- **No build tools needed** — just open `index.html`
+- **Pixel aesthetic** - grid backgrounds, dashed borders, chunky box-shadows
+- **Coffee theme** - animated floating cup, steam lines, cozy warm palette
+- **Fully responsive** - single column on mobile, centered layout
+- **No JavaScript frameworks** - pure vanilla HTML, CSS, JS
+- **No build tools needed** - just open `index.html`
 
 ---
 
